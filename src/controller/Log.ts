@@ -1,6 +1,6 @@
 import Controller from '@ctsy/controller/dist/controller'
 /**
-  * 聊天 ImLog
+  * 聊天 Log
   * UID UID 大数值自增(bigint)
   * 组ID GID 大整数(bigint)
   * 发送人 CUID 大整数(bigint)
@@ -8,9 +8,9 @@ import Controller from '@ctsy/controller/dist/controller'
   * 类型 Type 序号(bigint)
   * 内容 V 字符250(char(250))
 */
-export default class ImLog extends Controller{
+export default class Log extends Controller{
   get _KeywordTable(){
-    return 'ImLog'
+    return 'Log'
   }
  
   get _KeywordFields(){

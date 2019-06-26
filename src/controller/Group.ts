@@ -1,6 +1,6 @@
 import Controller from '@ctsy/controller/dist/controller'
 /**
-  * 聊天组 ImGroup
+  * 聊天组 Group
   * 组号 GID 大数值自增(bigint)
   * 组类型 Type 状态值(tinyint(1))
   * 管理员 AUID 大整数(bigint)
@@ -8,9 +8,9 @@ import Controller from '@ctsy/controller/dist/controller'
   * 创建时间 CTime 时间戳(timestamp)
   * 状态 Status 状态值(tinyint(1))
 */
-export default class ImGroup extends Controller{
+export default class Group extends Controller{
   get _KeywordTable(){
-    return 'ImGroup'
+    return 'Group'
   }
  
   get _KeywordFields(){

@@ -1,12 +1,12 @@
 export enum Models{
     
         //聊天成员
-        ImMem="ImMem",
+        Mem="Mem",
     
         //聊天组
-        ImGroup="ImGroup",
+        Group="Group",
     
         //聊天
-        ImLog="ImLog",
+        Log="Log",
         
 }

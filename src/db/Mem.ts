@@ -1,15 +1,14 @@
 import { DbDataType } from "@ctsy/model";
 /**
-  * 聊天 ImLog
-  * UID UID 大数值自增(bigint)
-  * 组ID GID 大整数(bigint)
-  * 发送人 CUID 大整数(bigint)
-  * 发送时间 CTime 时间戳(timestamp)
-  * 类型 Type 序号(bigint)
-  * 内容 V 字符250(char(250))
+  * 聊天成员 Mem
+  * MID MID 大数值自增(bigint)
+  * GID GID 大整数(bigint)
+  * 成员ID UID 大整数(bigint)
+  * 角色 Rule 状态值(tinyint(1))
+  * 加入时间 CTime 时间戳(timestamp)
 */
 export default {    
-    UID:{
+    MID:{
         type:DbDataType.bigint,
         primaryKey:true,
         autoIncrement:true,
@@ -23,8 +22,15 @@ export default {
         defaultValue:0,
         allowNull:false
     },    
-    CUID:{
+    UID:{
         type:DbDataType.bigint,
+        primaryKey:false,
+        autoIncrement:false,
+        defaultValue:0,
+        allowNull:false
+    },    
+    Rule:{
+        type:DbDataType.tinyint(1),
         primaryKey:false,
         autoIncrement:false,
         defaultValue:0,
@@ -35,20 +41,6 @@ export default {
         primaryKey:false,
         autoIncrement:false,
         defaultValue:new Date,
-        allowNull:false
-    },    
-    Type:{
-        type:DbDataType.bigint,
-        primaryKey:false,
-        autoIncrement:false,
-        defaultValue:0,
-        allowNull:false
-    },    
-    V:{
-        type:DbDataType.char(250),
-        primaryKey:false,
-        autoIncrement:false,
-        defaultValue:"",
         allowNull:false
     },
 }
